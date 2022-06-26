@@ -37,3 +37,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 1.4 移动适配 vant
 +postcss-pxtorem 是一款 PostCSS 插件，用于将 px 单位转化为 rem 单位----yarn add postcss-pxtorem -D
 +lib-flexible 用于设置 rem 基准值-----yarn add amfe-flexible
+12336464
