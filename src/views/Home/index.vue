@@ -1,14 +1,12 @@
 <template>
-  <div>
-    <!-- 一级占位符 放在app.vue里 -->
-    <!-- 这里放的是底部相同的部分 -->
-    <router-view></router-view>
-  </div>
+<div>
+    首页
+</div>
 </template>
 
 <script>
 export default {
-  created () { },
+  created () {},
   data () {
     return {}
   },
@@ -20,5 +18,6 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
+
 </style>
