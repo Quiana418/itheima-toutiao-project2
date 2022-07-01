@@ -9,6 +9,7 @@ const Video = () => import('@/views/Video')
 const My = () => import('@/views/My')
 const Question = () => import('@/views/Question')
 const Login = () => import('@/views/Login')
+const Search = () => import('@/views/Search')
 
 Vue.use(VueRouter)
 
@@ -20,11 +21,12 @@ const routes = [
     children: [
       { path: '/home', component: Home },
       { path: '/video', component: Video },
-      { path: '/my', component: My },
+      { path: '/my', component: My, name: 'my' },
       { path: '/question', component: Question }
     ]
   },
-  { path: '/login', component: Login }
+  { path: '/login', component: Login },
+  { path: '/search', component: Search }
 
 ]
 

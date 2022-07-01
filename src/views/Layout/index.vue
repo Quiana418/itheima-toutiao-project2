@@ -1,7 +1,10 @@
 <template>
   <div>
     <!-- 二级占位符 放在Layout/index.vue里 -->
-    <router-view />
+    <!-- 用keep-alive做缓存 切换到其他页面 返回的时候还是显示之前的状态 只有Home才缓存 -->
+    <keep-alive :include="['Home']">
+      <router-view class="main" />
+    </keep-alive>
 
     <van-tabbar route>
       <van-tabbar-item replace to="/home" icon="home-o">
@@ -28,6 +31,7 @@
 </template>
 
 <script>
+
 export default {
   created () { },
   data () {
@@ -35,13 +39,19 @@ export default {
   },
   methods: {},
   computed: {},
-  watch: {},
+
   filters: {},
   components: {}
 }
 </script>
 
 <style scoped lang='less'>
+//设计稿是750的 所以模拟器里的数据*2 才能用，可以直接量设计稿的
+.main {
+  // padding-top: 180px;
+  padding-bottom: 500px;
+  background-color: #f5f7f9;
+}
 .toutiao {
   font-size: 40px;
 }

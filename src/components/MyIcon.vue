@@ -1,12 +1,16 @@
 <template>
-  <div>
-    <!-- 一级占位符 放在app.vue里 -->
-    <router-view></router-view>
-  </div>
+  <!-- 封装一个组件 简写icon样式  注册成全局组件-->
+  <i class="toutiao" :class='"toutiao-" + name'></i>
 </template>
 
 <script>
 export default {
+  props: {
+    name: {
+      type: String,
+      required: true
+    }
+  },
   created () { },
   data () {
     return {}

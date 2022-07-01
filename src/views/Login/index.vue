@@ -1,6 +1,6 @@
 <template>
   <div>
-    <van-nav-bar title="登录">
+    <van-nav-bar title="登录" @click-left="$router.back()">
       <!-- <van-icon name="cross" slot='left'/> -->
       <template #left>
         <van-icon name="cross" />
@@ -22,7 +22,8 @@
         ]"
       >
         <!-- 图标插槽 -->
-        <i class="toutiao toutiao-shouji" slot="left-icon"></i>
+        <!-- <i class="toutiao toutiao-shouji" slot="left-icon"></i> -->
+        <MyIcon name="shouji" slot="left-icon"></MyIcon>
       </van-field>
       <van-field
         v-model.trim="code"
@@ -96,6 +97,7 @@ export default {
         console.log(res)
         // 登录成功后 把用户登录信息通过vuex存储
         this.$store.commit('setUser', res.data.data)
+        this.$router.push({ name: 'my' })
       } catch (err) {
         console.log(err)
       }

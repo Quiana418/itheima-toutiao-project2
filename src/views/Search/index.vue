@@ -1,12 +1,10 @@
 <template>
-  <div>
-    <!-- 一级占位符 放在app.vue里 -->
-    <router-view></router-view>
-  </div>
+  <div>search</div>
 </template>
 
 <script>
 export default {
+  name: 'Search',
   created () { },
   data () {
     return {}
@@ -19,5 +17,5 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang='less'>
 </style>
